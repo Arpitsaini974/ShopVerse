@@ -1,0 +1,125 @@
+// Brands definition with category associations (category_id 1 to 10)
+const brands = [
+  // Mobiles (1)
+  { name: 'Apple', slug: 'apple', categories: [1, 2] },
+  { name: 'Samsung', slug: 'samsung', categories: [1, 2, 4] },
+  { name: 'OnePlus', slug: 'oneplus', categories: [1, 2] },
+  { name: 'Google', slug: 'google', categories: [1, 2] },
+  { name: 'Xiaomi', slug: 'xiaomi', categories: [1, 2, 4] },
+  { name: 'Redmi', slug: 'redmi', categories: [1] },
+  { name: 'Realme', slug: 'realme', categories: [1] },
+  { name: 'Vivo', slug: 'vivo', categories: [1] },
+  { name: 'Oppo', slug: 'oppo', categories: [1] },
+  { name: 'Motorola', slug: 'motorola', categories: [1] },
+  { name: 'Nothing', slug: 'nothing', categories: [1, 2] },
+  { name: 'iQOO', slug: 'iqoo', categories: [1] },
+  { name: 'Poco', slug: 'poco', categories: [1] },
+  { name: 'Nokia', slug: 'nokia', categories: [1] },
+
+  // Electronics (2)
+  { name: 'Sony', slug: 'sony', categories: [2] },
+  { name: 'JBL', slug: 'jbl', categories: [2] },
+  { name: 'Bose', slug: 'bose', categories: [2] },
+  { name: 'Dell', slug: 'dell', categories: [2] },
+  { name: 'HP', slug: 'hp', categories: [2] },
+  { name: 'Lenovo', slug: 'lenovo', categories: [2] },
+  { name: 'ASUS', slug: 'asus', categories: [2] },
+  { name: 'Acer', slug: 'acer', categories: [2] },
+  { name: 'MSI', slug: 'msi', categories: [2] },
+  { name: 'Canon', slug: 'canon', categories: [2] },
+  { name: 'Nikon', slug: 'nikon', categories: [2] },
+  { name: 'GoPro', slug: 'gopro', categories: [2] },
+  { name: 'Logitech', slug: 'logitech', categories: [2] },
+  { name: 'Anker', slug: 'anker', categories: [1, 2] },
+  { name: 'TP-Link', slug: 'tp-link', categories: [2] },
+  { name: 'SanDisk', slug: 'sandisk', categories: [2] },
+  { name: 'boAt', slug: 'boat', categories: [2] },
+  { name: 'Noise', slug: 'noise', categories: [2] },
+
+  // Fashion (3)
+  { name: 'Nike', slug: 'nike', categories: [3, 7] },
+  { name: 'Adidas', slug: 'adidas', categories: [3, 7] },
+  { name: 'Puma', slug: 'puma', categories: [3, 7] },
+  { name: "Levi's", slug: 'levis', categories: [3] },
+  { name: 'Zara', slug: 'zara', categories: [3] },
+  { name: 'H&M', slug: 'hm', categories: [3] },
+  { name: 'Roadster', slug: 'roadster', categories: [3] },
+  { name: 'Allen Solly', slug: 'allen-solly', categories: [3] },
+  { name: 'Peter England', slug: 'peter-england', categories: [3] },
+  { name: 'Van Heusen', slug: 'van-heusen', categories: [3] },
+  { name: 'Bata', slug: 'bata', categories: [3] },
+  { name: 'Skechers', slug: 'skechers', categories: [3] },
+  { name: 'Woodland', slug: 'woodland', categories: [3, 7] },
+
+  // Appliances (4)
+  { name: 'LG', slug: 'lg', categories: [4, 2] },
+  { name: 'Whirlpool', slug: 'whirlpool', categories: [4] },
+  { name: 'IFB', slug: 'ifb', categories: [4] },
+  { name: 'Haier', slug: 'haier', categories: [4] },
+  { name: 'Godrej', slug: 'godrej', categories: [4] },
+  { name: 'Voltas', slug: 'voltas', categories: [4] },
+  { name: 'Daikin', slug: 'daikin', categories: [4] },
+  { name: 'Panasonic', slug: 'panasonic', categories: [4, 2] },
+  { name: 'Philips', slug: 'philips', categories: [4, 5, 6] },
+  { name: 'Bosch', slug: 'bosch', categories: [4] },
+  { name: 'Kent', slug: 'kent', categories: [4] },
+
+  // Home (5)
+  { name: 'IKEA', slug: 'ikea', categories: [5] },
+  { name: 'Sleepwell', slug: 'sleepwell', categories: [5] },
+  { name: 'Urban Ladder', slug: 'urban-ladder', categories: [5] },
+  { name: 'Bombay Dyeing', slug: 'bombay-dyeing', categories: [5] },
+  { name: 'Philips Hue', slug: 'philips-hue', categories: [5, 2] },
+  { name: 'Milton', slug: 'milton', categories: [5] },
+  { name: 'Prestige', slug: 'prestige', categories: [4, 5] },
+  { name: 'Solimo', slug: 'solimo', categories: [5, 10] },
+
+  // Beauty (6)
+  { name: "L'Oreal Paris", slug: 'loreal-paris', categories: [6] },
+  { name: 'Maybelline', slug: 'maybelline', categories: [6] },
+  { name: 'Nivea', slug: 'nivea', categories: [6] },
+  { name: 'Forest Essentials', slug: 'forest-essentials', categories: [6] },
+  { name: 'Mamaearth', slug: 'mamaearth', categories: [6] },
+  { name: 'Plum', slug: 'plum', categories: [6] },
+  { name: 'Minimalist', slug: 'minimalist', categories: [6] },
+  { name: 'Philips Grooming', slug: 'philips-grooming', categories: [6] },
+  { name: 'The Body Shop', slug: 'the-body-shop', categories: [6] },
+
+  // Sports (7)
+  { name: 'Yonex', slug: 'yonex', categories: [7] },
+  { name: 'Nivia', slug: 'nivia', categories: [7] },
+  { name: 'SG', slug: 'sg', categories: [7] },
+  { name: 'Cosco', slug: 'cosco', categories: [7] },
+  { name: 'Decathlon', slug: 'decathlon', categories: [7] },
+  { name: 'Firefox', slug: 'firefox', categories: [7] },
+
+  // Books (8)
+  { name: 'Penguin', slug: 'penguin', categories: [8] },
+  { name: 'HarperCollins', slug: 'harpercollins', categories: [8] },
+  { name: 'Bloomsbury', slug: 'bloomsbury', categories: [8] },
+  { name: 'Rupa Publications', slug: 'rupa', categories: [8] },
+  { name: 'McGraw Hill', slug: 'mcgraw-hill', categories: [8] },
+  { name: 'Arihant', slug: 'arihant', categories: [8] },
+
+  // Toys (9)
+  { name: 'LEGO', slug: 'lego', categories: [9] },
+  { name: 'Hasbro', slug: 'hasbro', categories: [9] },
+  { name: 'Mattel', slug: 'mattel', categories: [9] },
+  { name: 'Hot Wheels', slug: 'hot-wheels', categories: [9] },
+  { name: 'Fisher-Price', slug: 'fisher-price', categories: [9] },
+  { name: 'Funskool', slug: 'funskool', categories: [9] },
+  { name: 'Nerf', slug: 'nerf', categories: [9] },
+
+  // Grocery (10)
+  { name: 'Tata Sampann', slug: 'tata-sampann', categories: [10] },
+  { name: 'Nescafe', slug: 'nescafe', categories: [10] },
+  { name: "Kellogg's", slug: 'kelloggs', categories: [10] },
+  { name: 'Amul', slug: 'amul', categories: [10] },
+  { name: 'Fortune', slug: 'fortune', categories: [10] },
+  { name: 'Britannia', slug: 'britannia', categories: [10] },
+  { name: 'Cadbury', slug: 'cadbury', categories: [10] },
+  { name: 'Surf Excel', slug: 'surf-excel', categories: [10] },
+  { name: 'Daawat', slug: 'daawat', categories: [10] },
+];
+
+module.exports = { brands };

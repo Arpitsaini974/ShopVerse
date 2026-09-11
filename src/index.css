@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f1f3f6;
+    color: #212121;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+  }
+
+  input, select, textarea {
+    font-family: inherit;
+    outline: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+  }
+}
+
+@layer utilities {
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Fully Responsive Fluid Adaptive Product Grids (100% Width Auto-Fill) */
+  .responsive-product-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(150px, 45vw, 175px), 1fr));
+    gap: 0.75rem;
+  }
+
+  /* Standard phones (360px - 480px): exactly 2 even columns filling available width */
+  @media (min-width: 360px) {
+    .responsive-product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(clamp(155px, 46vw, 195px), 1fr));
+      gap: 0.875rem;
+    }
+  }
+
+  /* Large phones / mini tablets (480px - 640px): 2-3 even columns */
+  @media (min-width: 480px) {
+    .responsive-product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(clamp(175px, 30vw, 210px), 1fr));
+      gap: 1rem;
+    }
+  }
+
+  /* Tablets (640px - 768px): 3-4 even columns */
+  @media (min-width: 640px) {
+    .responsive-product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(clamp(185px, 23vw, 215px), 1fr));
+      gap: 1rem;
+    }
+  }
+
+  /* Tablet landscape / smaller laptops (768px - 1024px): 3-4 even columns with sidebar */
+  @media (min-width: 768px) {
+    .responsive-product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(clamp(195px, 22vw, 230px), 1fr));
+      gap: 1.125rem;
+    }
+  }
+
+  /* Laptops / Desktops (1024px - 1366px): 4-5 even columns */
+  @media (min-width: 1024px) {
+    .responsive-product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 18vw, 235px), 1fr));
+      gap: 1.25rem;
+    }
+  }
+
+  /* Standard Desktops (1366px - 1600px): 5-6 even columns */
+  @media (min-width: 1366px) {
+    .responsive-product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(clamp(210px, 15vw, 245px), 1fr));
+      gap: 1.25rem;
+    }
+  }
+
+  /* Full HD Displays (1920px+): 6-7 even columns */
+  @media (min-width: 1920px) {
+    .responsive-product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(clamp(215px, 12vw, 255px), 1fr));
+      gap: 1.35rem;
+    }
+  }
+
+  /* Ultra-wide / 2K / 4K Displays (2560px+): 7-9 even columns */
+  @media (min-width: 2560px) {
+    .responsive-product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(clamp(225px, 10vw, 265px), 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+
+  /* Hero Swiper Styling */
+  .hero-swiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  .hero-swiper .swiper-pagination-bullet-active {
+    background: #3b82f6 !important;
+    width: 22px !important;
+    border-radius: 9999px !important;
+    opacity: 1 !important;
+  }
+  .hero-swiper .swiper-button-prev,
+  .hero-swiper .swiper-button-next {
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.2s ease;
+  }
+  .hero-swiper .swiper-button-prev:after,
+  .hero-swiper .swiper-button-next:after {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .hero-swiper .swiper-button-prev:hover,
+  .hero-swiper .swiper-button-next:hover {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+  @media (max-width: 768px) {
+    .hero-swiper .swiper-button-prev,
+    .hero-swiper .swiper-button-next {
+      display: none;
+    }
+  }
+}
+
